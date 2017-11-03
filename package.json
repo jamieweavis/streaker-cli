@@ -1,0 +1,8 @@
+{
+  "name": "streaker",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/jamiestraw/streaker-cli.git",
+  "author": "Jamie Straw <me@jamiestraw.com>",
+  "license": "MIT"
+}
