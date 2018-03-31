@@ -1,8 +1,40 @@
 {
   "name": "streaker",
+  "description": "GitHub contribution streak tracking CLI tool",
   "version": "0.0.1",
-  "main": "index.js",
-  "repository": "https://github.com/jamiestraw/streaker-cli.git",
   "author": "Jamie Straw <me@jamiestraw.com>",
-  "license": "MIT"
+  "bin": {
+    "streaker": "src/streaker.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jamiestraw/streaker-cli/issues"
+  },
+  "dependencies": {
+    "caporal": "^0.10.0",
+    "chalk": "^2.3.2",
+    "contribution": "^1.0.12",
+    "ora": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.10.0",
+    "prettier": "^1.11.1"
+  },
+  "homepage": "https://github.com/jamiestraw/streaker-cli#readme",
+  "keywords": [
+    "cli",
+    "contribution",
+    "contribution-graph",
+    "contributions",
+    "github",
+    "node",
+    "nodejs",
+    "streak",
+    "streaker"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/jamiestraw/streaker-cli.git"
 }
