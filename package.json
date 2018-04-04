@@ -2,12 +2,12 @@
   "name": "streaker",
   "description": "GitHub contribution streak fetching CLI tool",
   "version": "1.0.1",
-  "author": "Jamie Straw <me@jamiestraw.com>",
+  "author": "Jamie Weavis <jamie.weavis@gmail.com>",
   "bin": {
     "streaker": "src/streaker.js"
   },
   "bugs": {
-    "url": "https://github.com/jamiestraw/streaker-cli/issues"
+    "url": "https://github.com/jamieweavis/streaker-cli/issues"
   },
   "dependencies": {
     "caporal": "^0.10.0",
@@ -22,7 +22,7 @@
     "eslint-plugin-import": "^2.10.0",
     "prettier": "^1.11.1"
   },
-  "homepage": "https://github.com/jamiestraw/streaker-cli#readme",
+  "homepage": "https://github.com/jamieweavis/streaker-cli#readme",
   "keywords": [
     "cli",
     "contribution",
@@ -36,5 +36,5 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": "https://github.com/jamiestraw/streaker-cli.git"
+  "repository": "https://github.com/jamiestrjamieweavisaw/streaker-cli.git"
 }
