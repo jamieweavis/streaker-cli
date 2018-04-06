@@ -1,6 +1,6 @@
 {
   "name": "streaker",
-  "description": "GitHub contribution streak fetching CLI tool",
+  "description": "GitHub contribution streak fetching CLI app",
   "version": "1.0.2",
   "author": "Jamie Weavis <jamie.weavis@gmail.com>",
   "bin": {

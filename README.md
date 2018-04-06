@@ -1,6 +1,6 @@
 # Streaker
 
-> 🐙 GitHub contribution streak fetching CLI tool
+> 🐙 GitHub contribution streak fetching CLI app
 
 [![Downloads](https://img.shields.io/npm/dt/streaker.svg)](https://npmjs.com/package/streaker) [![Version](https://img.shields.io/npm/v/streaker.svg)](https://npmjs.com/package/streaker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jamieweavis/streaker/master/LICENSE.md) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
