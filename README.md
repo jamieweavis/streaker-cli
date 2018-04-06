@@ -1,4 +1,4 @@
-# Streaker
+# streaker-cli
 
 > 🐙 GitHub contribution streak fetching CLI app
 
