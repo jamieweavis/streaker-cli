@@ -1,22 +1,19 @@
 #!/usr/bin/env node
-const ora = require('ora');
-const chalk = require('chalk');
-const streaker = require('caporal');
+
 const contribution = require('contribution');
+const streaker = require('caporal');
 const pjson = require('../package.json');
+const log = require('./log');
 
 streaker
   .version(pjson.version)
   .description(pjson.description)
-  .argument('<username>', 'GitHub username')
-  .action(args => {
-    const username = chalk.blue(args.username);
-    const spinner = ora(`Fetching streak for ${username}`).start();
-    spinner.color = 'yellow';
-    contribution(args.username).then(data => {
-      spinner.succeed(
-        `Fetched streak for ${username}: ${chalk.yellow(data.currentStreak)}`
-      );
-    });
+  .argument('<username>', 'GitHub Username')
+  .action(async args => {
+    const data = await contribution(args.username);
+    log.currentStreak(data.currentStreak);
+    log.bestStreak(data.bestStreak);
+    log.contributions(data.contributions);
   });
+
 streaker.parse(process.argv);
