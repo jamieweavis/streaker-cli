@@ -15,7 +15,7 @@ streaker
     spinner.color = 'yellow';
     contribution(args.username).then(data => {
       spinner.succeed(
-        `Fetched streak for ${username}: ${chalk.yellow(data.streak)}`
+        `Fetched streak for ${username}: ${chalk.yellow(data.currentStreak)}`
       );
     });
   });

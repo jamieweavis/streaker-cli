@@ -11,16 +11,16 @@
   },
   "dependencies": {
     "caporal": "^0.10.0",
-    "chalk": "^2.3.2",
-    "contribution": "^1.0.12",
-    "ora": "^2.0.0"
+    "chalk": "^2.4.1",
+    "contribution": "^1.2.0",
+    "ora": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.10.0",
-    "prettier": "^1.11.1"
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "prettier": "^1.14.3"
   },
   "homepage": "https://github.com/jamieweavis/streaker-cli#readme",
   "keywords": [
