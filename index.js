@@ -31,5 +31,5 @@ ${blue('Contributions:')}
   Best: ${data.contributions.best}
   Current: ${data.contributions.current}
   Total: ${data.contributions.total}
-  d`);
+  `);
 });
