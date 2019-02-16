@@ -4,20 +4,20 @@
   "version": "1.0.5",
   "author": "Jamie Weavis <jamie.weavis@gmail.com>",
   "bin": {
-    "streaker": "src/streaker.js"
+    "streaker": "index.js"
   },
   "bugs": {
     "url": "https://github.com/jamieweavis/streaker-cli/issues"
   },
   "dependencies": {
-    "caporal": "^0.10.0",
-    "contribution": "^1.2.0",
-    "signale": "^1.3.0"
+    "colorette": "^1.0.7",
+    "contribution": "^3.0.0",
+    "github-username-regex": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.7.0",
+    "eslint": "^5.14.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.14.0",
     "prettier": "^1.14.3"
   },
