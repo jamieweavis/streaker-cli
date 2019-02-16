@@ -1,4 +1,4 @@
-<p align="center"><img src="screenshot.svg" alt="Screenshot"></p>
+<p align="center"><img src="screenshot.png" alt="Screenshot" width=346></p>
 <h3 align="center">streaker-cli</h3>
 <p align="center">🐙 GitHub contribution streak fetching CLI app</p>
 <p align="center">
