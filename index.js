@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { blue, red, bold, underline } = require('colorette');
+const { blue, red } = require('colorette');
 const contribution = require('contribution');
 const githubUsernameRegex = require('github-username-regex');
 
