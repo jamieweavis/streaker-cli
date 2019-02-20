@@ -1,6 +1,6 @@
 <p align="center"><img src="screenshot.png" alt="Screenshot" width=346></p>
 <h3 align="center">streaker-cli</h3>
-<p align="center">🐙 GitHub contribution streak fetching CLI app</p>
+<p align="center">🐙 GitHub contribution streak & stat tracking CLI app</p>
 <p align="center">
     <a href="https://npmjs.com/package/streaker"><img src="https://img.shields.io/npm/dt/streaker.svg" alt="npm Downloads"></a>
     <a href="https://npmjs.com/package/streaker"><img src="https://img.shields.io/npm/v/streaker.svg" alt="npm Version"></a>
