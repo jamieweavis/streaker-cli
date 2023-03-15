@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "types": ["node", "jest"],
+    "outDir": "build",
+    "moduleResolution": "node"
+  },
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
+}

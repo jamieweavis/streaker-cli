@@ -1,37 +1,30 @@
-<p align="center"><img src="screenshot.png" alt="Screenshot" width=346></p>
-<h3 align="center">streaker-cli</h3>
-<p align="center">🔥 GitHub contribution streak & stat tracking CLI app</p>
-<p align="center">
-    <a href="https://npmjs.com/package/streaker"><img src="https://img.shields.io/npm/dt/streaker.svg" alt="npm Downloads"></a>
-    <a href="https://npmjs.com/package/streaker"><img src="https://img.shields.io/npm/v/streaker.svg" alt="npm Version"></a>
-    <a href="https://github.com/jamieweavis/streaker-cli/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-    <a href="https://github.com/airbnb/javascript"><img src="https://img.shields.io/badge/codestyle-airbnb-fd5c63.svg" alt="airbnb Code Style"></a>
-</p>
+# Streaker CLI
+
+> 🔥 GitHub contribution streak & stat tracking CLI app
+
+[![build](https://github.com/jamieweavis/streaker-cli/workflows/build/badge.svg)](https://github.com/jamieweavis/streaker-cli/actions/workflows/build.yml)
+[![downloads](https://img.shields.io/npm/dt/streaker-cli.svg)](https://npmjs.com/package/streaker-cli)
+[![version](https://img.shields.io/npm/v/streaker-cli.svg)](https://github.com/jamieweavis/streaker-cli/releases)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/streaker-cli/blob/main/LICENSE.md)
+
+<img width=674 alt="Screenshot" src="./.github/screenshot.png">
 
 ## Installation
 
-Streaker is installed globally via the command line from the npm registry with either [yarn](https://github.com/yarnpkg/yarn) or [npm](https://github.com/npm/npm).
-
 ```sh
-# Via yarn
-$ yarn global add streaker
-
-# Via npm
-$ npm install --global streaker
+npm install -g streaker
 ```
 
 ## Usage
 
-Streaker is run globally from the command line with the `streaker` command.
-
 ```sh
-$ streaker <username>
+streaker <username>
 ```
 
 ## Related
 
-- [streaker](https://github.com/jamieweavis/streaker) - 🔥 GitHub contribution streak & stat tracking menu bar app
-- [contribution](https://github.com/jamieweavis/contribution) - 🗓 GitHub contribution streak & stat fetcher with zero dependencies
+- [Streaker](https://github.com/jamieweavis/streaker) - 🔥 GitHub contribution streak & stat tracking menu bar app
+- [Contribution](https://github.com/jamieweavis/contribution) - 🗓 GitHub contribution streak & stat fetcher with zero dependencies
 
 ## License
 

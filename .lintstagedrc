@@ -1,0 +1,6 @@
+{
+  "*.ts": [
+    "rome format --write",
+    "rome check --apply-suggested"
+  ]
+}
