@@ -1,7 +1,7 @@
 {
   "name": "streaker",
   "description": "GitHub contribution streak & stat tracking CLI app",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Jamie Weavis",
   "main": "index.js",
   "homepage": "https://github.com/jamieweavis/streaker-cli#readme",
