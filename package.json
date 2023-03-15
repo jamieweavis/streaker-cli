@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "colorette": "^2.0.19",
-    "contribution": "^3.0.0"
+    "contribution": "^5.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.4",
