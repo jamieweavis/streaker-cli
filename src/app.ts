@@ -21,8 +21,9 @@ import { fetchStats } from 'contribution';
 
     console.info(
       `  ${blue('Streak')}
-    Current ${yellow(streak.current)}
-    Best    ${yellow(streak.best)}
+    Current  ${yellow(streak.current)}
+    Best     ${yellow(streak.best)}
+    Previous ${yellow(streak.previous)}
     `,
     );
 
