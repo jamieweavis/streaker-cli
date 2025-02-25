@@ -30,8 +30,8 @@ import { fetchStats } from 'contribution';
 
     console.info(
       `  ${blue('Contributions')}
-    Today ${yellow(contributions.current)}
     Best  ${yellow(contributions.best)}
+    Today ${yellow(contributions.current)}
     Total ${yellow(contributions.total)}
       `,
     );
