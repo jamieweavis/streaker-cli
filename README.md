@@ -7,7 +7,7 @@
 [![version](https://img.shields.io/npm/v/streaker-cli.svg)](https://github.com/jamieweavis/streaker-cli/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/streaker-cli/blob/main/LICENSE.md)
 
-<img width=674 alt="Screenshot" src="./.github/screenshot.png">
+<img width=335 alt="Screenshot" src="./.github/screenshot.png">
 
 ## Installation
 
