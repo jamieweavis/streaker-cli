@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/jamieweavis/streaker-cli/compare/v2.1.0...v2.2.0) (2025-02-25)
+
+
+### Features
+
+* add newline before output starts ([ca9037e](https://github.com/jamieweavis/streaker-cli/commit/ca9037e891a418218bf8f6902de312e296a81fc6))
+
 # [2.1.0](https://github.com/jamieweavis/streaker-cli/compare/v2.0.2...v2.1.0) (2025-02-25)
 
 
