@@ -34,7 +34,7 @@
     "lint:fix": "npm run lint -- --apply-suggested",
     "format": "rome format src",
     "format:write": "npm run format --  --write",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "colorette": "^2.0.20",
