@@ -20,7 +20,8 @@ import { fetchStats } from 'contribution';
     const { streak, contributions } = await fetchStats(username);
 
     console.info(
-      `  ${blue('Streak')}
+      `
+  ${blue('Streak')}
     Current  ${yellow(streak.current)}
     Best     ${yellow(streak.best)}
     Previous ${yellow(streak.previous)}
