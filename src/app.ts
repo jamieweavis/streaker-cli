@@ -9,7 +9,7 @@ import { fetchStats } from 'contribution';
     if (!username) {
       console.error(
         `
-  ${red('Missing required GitHub username!')}
+  ${red('Please provide a GitHub username')}
 
   streaker ${cyan('<username>')}
 `,
@@ -18,13 +18,6 @@ import { fetchStats } from 'contribution';
     }
 
     const { streak, contributions } = await fetchStats(username);
-
-    console.info(
-      `
-  GitHub contribution statistics for %s
-  `,
-      cyan(username),
-    );
 
     console.info(
       `  ${blue('Streak')}
