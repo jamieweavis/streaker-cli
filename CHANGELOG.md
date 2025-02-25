@@ -1,3 +1,11 @@
+# [2.3.0](https://github.com/jamieweavis/streaker-cli/compare/v2.2.0...v2.3.0) (2025-02-25)
+
+
+### Features
+
+* reorder contributions to show best first ([a6e3017](https://github.com/jamieweavis/streaker-cli/commit/a6e3017757504f9000e3285e87173250a99a1c18))
+* reorder streak to show best first ([f760ab3](https://github.com/jamieweavis/streaker-cli/commit/f760ab328c27874708f658f8be93bd9bca69d965))
+
 # [2.2.0](https://github.com/jamieweavis/streaker-cli/compare/v2.1.0...v2.2.0) (2025-02-25)
 
 
