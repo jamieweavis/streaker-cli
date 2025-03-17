@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/jamieweavis/streaker-cli/compare/v2.3.0...v2.4.0) (2025-03-17)
+
+
+### Features
+
+* refactor with commander ([8270bef](https://github.com/jamieweavis/streaker-cli/commit/8270befff5346412123e39c320b4abf88e2997a0))
+
 # [2.3.0](https://github.com/jamieweavis/streaker-cli/compare/v2.2.0...v2.3.0) (2025-02-25)
 
 
