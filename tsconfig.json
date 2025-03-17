@@ -5,7 +5,8 @@
     "target": "es5",
     "types": ["node"],
     "outDir": "build",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "include": ["src"],
   "exclude": ["**/*.spec.ts"]

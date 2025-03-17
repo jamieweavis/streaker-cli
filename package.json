@@ -3,12 +3,12 @@
   "description": "GitHub contribution streak & stat tracking CLI app",
   "version": "2.3.0",
   "author": "Jamie Weavis",
-  "main": "index.js",
+  "main": "build/src/app.js",
   "homepage": "https://github.com/jamieweavis/streaker-cli#readme",
   "license": "MIT",
   "repository": "https://github.com/jamieweavis/streaker-cli.git",
   "bin": {
-    "streaker": "build/app.js"
+    "streaker": "build/src/app.js"
   },
   "bugs": {
     "url": "https://github.com/jamieweavis/streaker-cli/issues"
@@ -27,7 +27,7 @@
     "stats"
   ],
   "scripts": {
-    "start": "node ./build/app.js",
+    "start": "node ./build/src/app.js",
     "dev": "ts-node-dev --respawn ./src/app.ts",
     "build": "rimraf ./build && tsc",
     "lint": "biome lint ./src",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "colorette": "^2.0.20",
+    "commander": "^13.1.0",
     "contribution": "^6.0.0"
   },
   "devDependencies": {
@@ -59,5 +60,22 @@
     "semantic-release": "24.2.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "5.7.3"
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/changelog",
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github",
+      "@semantic-release/release-notes-generator"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": ["biome format --write", "biome lint --write"]
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }
