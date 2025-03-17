@@ -27,11 +27,11 @@
     "stats"
   ],
   "scripts": {
+    "start": "node ./build/app.js",
     "dev": "ts-node-dev --respawn ./src/app.ts",
     "build": "rimraf ./build && tsc",
-    "build:watch": "npm run build -- --watch",
     "lint": "biome lint ./src",
-    "lint:fix": "npm run lint -- --write",
+    "lint:write": "npm run lint -- --write",
     "format": "biome format ./src",
     "format:write": "npm run format --  --write",
     "prepare": "husky"
