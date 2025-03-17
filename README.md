@@ -26,6 +26,12 @@ streaker <username>
 - [Streaker](https://github.com/jamieweavis/streaker) - 🔥 GitHub contribution streak & stat tracking menu bar app
 - [Contribution](https://github.com/jamieweavis/contribution) - 🗓 GitHub contribution streak & stat fetcher with zero dependencies
 
+## Built With
+
+- [Node.js](https://github.com/nodejs/node)
+- [TypeScript](https://github.com/microsoft/TypeScript)
+- [Commander.js](https://github.com/tj/commander.js)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
