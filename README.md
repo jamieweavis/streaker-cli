@@ -4,7 +4,7 @@
 
 [![build](https://github.com/jamieweavis/streaker-cli/workflows/build/badge.svg)](https://github.com/jamieweavis/streaker-cli/actions/workflows/build.yml)
 [![downloads](https://img.shields.io/npm/dt/streaker-cli.svg)](https://npmjs.com/package/streaker-cli)
-[![version](https://img.shields.io/npm/v/streaker-cli.svg)](https://github.com/jamieweavis/streaker-cli/releases)
+[![version](https://img.shields.io/npm/v/streaker.svg)](https://github.com/jamieweavis/streaker-cli/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/streaker-cli/blob/main/LICENSE.md)
 
 <img width=335 alt="Screenshot" src="./.github/screenshot.png">
