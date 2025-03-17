@@ -1,6 +1,6 @@
 # Streaker CLI
 
-> 🔥 GitHub contribution streak & stat tracking CLI app
+> 🔥 GitHub contribution streak & stat tracking command line app
 
 [![build](https://github.com/jamieweavis/streaker-cli/workflows/build/badge.svg)](https://github.com/jamieweavis/streaker-cli/actions/workflows/build.yml)
 [![downloads](https://img.shields.io/npm/dt/streaker-cli.svg)](https://npmjs.com/package/streaker-cli)
