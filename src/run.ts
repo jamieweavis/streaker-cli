@@ -1,5 +1,5 @@
 import { blue, red, yellow } from 'colorette';
-import { fetchStats } from 'contribution';
+import { fetchGitHubStats } from 'contribution';
 
 export const run = async (username?: string) => {
   try {
@@ -12,22 +12,22 @@ export const run = async (username?: string) => {
       return process.exit(1);
     }
 
-    const { streak, contributions } = await fetchStats(username);
+    const gitHubStatus = await fetchGitHubStats(username);
 
     console.info(
       `
   ${blue('Streak')}
-    Best     ${yellow(streak.best)}
-    Current  ${yellow(streak.current)}
-    Previous ${yellow(streak.previous)}
+    Best     ${yellow(gitHubStatus.bestStreak)}
+    Current  ${yellow(gitHubStatus.currentStreak)}
+    Previous ${yellow(gitHubStatus.previousStreak)}
 `,
     );
 
     console.info(
       `  ${blue('Contributions')}
-    Most  ${yellow(contributions.best)}
-    Today ${yellow(contributions.current)}
-    Total ${yellow(contributions.total)}`,
+    Most  ${yellow(gitHubStatus.mostContributions)}
+    Today ${yellow(gitHubStatus.todaysContributions)}
+    Total ${yellow(gitHubStatus.totalContributions)}`,
     );
 
     return process.exit(0);

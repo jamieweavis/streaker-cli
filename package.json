@@ -39,7 +39,7 @@
   "dependencies": {
     "colorette": "^2.0.20",
     "commander": "^13.1.0",
-    "contribution": "^6.0.0"
+    "contribution": "^7.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
