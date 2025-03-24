@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/jamieweavis/streaker-cli/compare/v2.4.0...v2.4.1) (2025-03-24)
+
+
+### Bug Fixes
+
+* upgrade to contribution v7 ([0b05caa](https://github.com/jamieweavis/streaker-cli/commit/0b05caabff974e2b3f576a64243c5984c052e167))
+
 # [2.4.0](https://github.com/jamieweavis/streaker-cli/compare/v2.3.0...v2.4.0) (2025-03-17)
 
 
