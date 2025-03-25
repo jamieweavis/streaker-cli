@@ -12,22 +12,22 @@ export const run = async (username?: string) => {
       return process.exit(1);
     }
 
-    const gitHubStatus = await fetchGitHubStats(username);
+    const gitHubStats = await fetchGitHubStats(username);
 
     console.info(
       `
   ${blue('Streak')}
-    Best     ${yellow(gitHubStatus.bestStreak)}
-    Current  ${yellow(gitHubStatus.currentStreak)}
-    Previous ${yellow(gitHubStatus.previousStreak)}
+    Best     ${yellow(gitHubStats.bestStreak)}
+    Current  ${yellow(gitHubStats.currentStreak)}
+    Previous ${yellow(gitHubStats.previousStreak)}
 `,
     );
 
     console.info(
       `  ${blue('Contributions')}
-    Most  ${yellow(gitHubStatus.mostContributions)}
-    Today ${yellow(gitHubStatus.todaysContributions)}
-    Total ${yellow(gitHubStatus.totalContributions)}`,
+    Most  ${yellow(gitHubStats.mostContributions)}
+    Today ${yellow(gitHubStats.todaysContributions)}
+    Total ${yellow(gitHubStats.totalContributions)}`,
     );
 
     return process.exit(0);
