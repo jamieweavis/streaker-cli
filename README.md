@@ -30,7 +30,7 @@ streaker <username> --graph
 ## Related
 
 - [Streaker](https://github.com/jamieweavis/streaker) - 🔥 GitHub contribution streak & stat tracking menu bar app
-- [Contribution](https://github.com/jamieweavis/contribution) - 🗓 GitHub contribution streak & stat fetcher with zero dependencies
+- [Contribution](https://github.com/jamieweavis/contribution) - 🗓 GitHub user contribution graph parser, streak & stat calculator
 
 ## Built With
 
