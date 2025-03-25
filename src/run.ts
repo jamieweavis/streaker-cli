@@ -1,7 +1,9 @@
 import { blue, red, yellow } from 'colorette';
 import { fetchGitHubStats } from 'contribution';
 
-export const run = async (username?: string) => {
+import { buildContributionGraph } from './contribution-graph';
+
+export const run = async (username?: string, showGraph?: boolean) => {
   try {
     if (!username) {
       console.error(
@@ -13,6 +15,12 @@ export const run = async (username?: string) => {
     }
 
     const gitHubStats = await fetchGitHubStats(username);
+
+    if (showGraph) {
+      console.info(`
+${buildContributionGraph(gitHubStats.contributions)}`);
+      return process.exit(0);
+    }
 
     console.info(
       `

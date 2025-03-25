@@ -7,7 +7,7 @@
 [![version](https://img.shields.io/npm/v/streaker.svg)](https://github.com/jamieweavis/streaker-cli/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/streaker-cli/blob/main/LICENSE)
 
-<img width=335 alt="Screenshot" src="./.github/screenshot.png">
+<img width=593 alt="Screenshot" src="./.github/screenshot.png">
 
 ## Installation
 
@@ -17,8 +17,14 @@ npm install -g streaker
 
 ## Usage
 
+Display streak & contribution stats for a user:
 ```sh
 streaker <username>
+```
+
+Display ASCII GitHub contribution graph for a user:
+```sh
+streaker <username> --graph
 ```
 
 ## Related

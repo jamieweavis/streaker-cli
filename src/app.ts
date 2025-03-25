@@ -10,10 +10,16 @@ const init = () => {
     .description(description)
     .version(version)
     .arguments('<username>')
+    .option(
+      '-g, --graph',
+      'output ASCII GitHub contribution graph instead of stats',
+    )
     .parse();
 
   const username = result.args[0]?.trim();
-  return run(username);
+  const options = result.opts();
+
+  return run(username, options.graph);
 };
 
 init();
