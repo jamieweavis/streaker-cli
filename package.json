@@ -1,6 +1,6 @@
 {
   "name": "streaker",
-  "description": "GitHub contribution streak & stat tracking command line app",
+  "description": "GitHub contribution streak/statistic tracking command line application with ASCII contribution graph",
   "version": "2.5.0",
   "author": "Jamie Weavis",
   "main": "build/src/app.js",
@@ -62,9 +62,7 @@
     "typescript": "^5.8.3"
   },
   "release": {
-    "branches": [
-      "main"
-    ],
+    "branches": ["main"],
     "plugins": [
       "@semantic-release/changelog",
       "@semantic-release/commit-analyzer",
@@ -75,14 +73,9 @@
     ]
   },
   "lint-staged": {
-    "*.ts": [
-      "biome format --write",
-      "biome lint --write"
-    ]
+    "*.ts": ["biome format --write", "biome lint --write"]
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "extends": ["@commitlint/config-conventional"]
   }
 }
