@@ -39,7 +39,7 @@ ${buildContributionGraph(gitHubStats.contributions)}`);
     );
 
     return process.exit(0);
-  } catch (error) {
+  } catch (_error) {
     console.error(`\n${red('Failed to fetch contribution stats')}`);
     return process.exit(1);
   }
