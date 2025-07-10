@@ -31,9 +31,9 @@
     "dev": "ts-node-dev --respawn ./src/app.ts",
     "build": "rimraf ./build && tsc",
     "lint": "biome lint ./src",
-    "lint:write": "npm run lint -- --write",
+    "lint:write": "pnpm lint -- --write",
     "format": "biome format ./src",
-    "format:write": "npm run format --  --write",
+    "format:write": "pnpm format --  --write",
     "prepare": "husky"
   },
   "dependencies": {
