@@ -3,7 +3,7 @@
 GitHub contribution streak/statistic tracking command line application with ASCII contribution graph
 
 [![ci](https://github.com/jamieweavis/streaker-cli/workflows/ci/badge.svg)](https://github.com/jamieweavis/streaker-cli/actions)
-[![downloads](https://img.shields.io/npm/dt/streaker-cli.svg)](https://npmjs.com/package/streaker-cli)
+[![downloads](https://img.shields.io/npm/dt/streaker.svg)](https://npmjs.com/package/streaker)
 [![version](https://img.shields.io/npm/v/streaker.svg)](https://github.com/jamieweavis/streaker-cli/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/streaker-cli/blob/main/LICENSE)
 
