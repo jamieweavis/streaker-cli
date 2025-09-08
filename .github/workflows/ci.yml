@@ -45,7 +45,7 @@ jobs:
         with:
           version: 10.13.1
       - run: pnpm install --frozen-lockfile
-      - run: pnpm audit
+      - run: pnpm audit --audit-level high
       - run: pnpm build
       - run: pnpm dlx semantic-release
         env:
