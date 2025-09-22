@@ -24,7 +24,7 @@ jobs:
         with:
           version: 10.13.1
       - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
+      - run: pnpm check
       - run: pnpm build
 
   release:

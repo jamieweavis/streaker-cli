@@ -30,10 +30,8 @@
     "start": "node ./build/src/app.js",
     "dev": "ts-node-dev --respawn ./src/app.ts",
     "build": "rimraf ./build && tsc",
-    "lint": "biome lint ./src",
-    "lint:write": "pnpm lint -- --write",
-    "format": "biome format ./src",
-    "format:write": "pnpm format --  --write",
+    "check": "biome check ./src",
+    "check:write": "pnpm check -- --write",
     "prepare": "husky"
   },
   "dependencies": {
