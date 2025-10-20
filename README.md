@@ -1,6 +1,6 @@
 # Streaker CLI
 
-GitHub contribution streak/statistic tracking command line application with ASCII contribution graph
+GitHub contribution streak and statistic tracking command line application with ASCII contribution graph
 
 [![ci](https://github.com/jamieweavis/streaker-cli/workflows/ci/badge.svg)](https://github.com/jamieweavis/streaker-cli/actions)
 [![downloads](https://img.shields.io/npm/dt/streaker.svg)](https://npmjs.com/package/streaker)
@@ -52,17 +52,7 @@ Sat │                                                █░░▓░
     └──────────────────────────────────────────────────────
 ```
 
-## Built With
-
-- [Node.js](https://github.com/nodejs/node)
-- [TypeScript](https://github.com/microsoft/TypeScript)
-- [Commander.js](https://github.com/tj/commander.js)
-
 ## Related
 
-- [Streaker](https://github.com/jamieweavis/streaker) - Cross-platform GitHub contribution streak/statistic tracking menu bar application with reminder notification
-- [Contribution](https://github.com/jamieweavis/contribution) - GitHub contribution graph parser - contribution streak & statistic calculator with zero dependencies
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [Streaker](https://github.com/jamieweavis/streaker) - Cross-platform GitHub contribution streak and statistic tracking menu bar application with reminder notification
+- [Contribution](https://github.com/jamieweavis/contribution) - GitHub contribution graph parser calculates contribution streak and commit statistics from a user's GitHub contribution graph page
