@@ -1,3 +1,20 @@
+# [2.6.0](https://github.com/jamieweavis/streaker-cli/compare/v2.5.1...v2.6.0) (2026-10-08)
+
+
+### Bug Fixes
+
+* show streaker as the program name in help ([baac201](https://github.com/jamieweavis/streaker-cli/commit/baac2017ba9efd7a8acf497f37f7778fed016560))
+
+
+### Features
+
+* three-column stats layout with octocat icon and accent colors ([53ae0a8](https://github.com/jamieweavis/streaker-cli/commit/53ae0a8c681ccdf631d2b1114eb43e2245edcc12))
+
+
+### Reverts
+
+* chore(release): 2.6.0 ([a4282c3](https://github.com/jamieweavis/streaker-cli/commit/a4282c3dff23f45bf208637acd0ab5ee8d1ed74d))
+
 ## [2.5.1](https://github.com/jamieweavis/streaker-cli/compare/v2.5.0...v2.5.1) (2025-04-14)
 
 
