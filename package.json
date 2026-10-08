@@ -35,7 +35,7 @@
     "dev": "node --watch ./src/app.ts",
     "build": "rimraf ./build && tsc",
     "check": "biome check ./src",
-    "check:write": "pnpm check -- --write",
+    "check:write": "biome check --write ./src",
     "test": "node --test \"src/**/*.spec.ts\""
   },
   "dependencies": {
