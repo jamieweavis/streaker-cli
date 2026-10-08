@@ -8,6 +8,7 @@ import { run } from './run.ts';
 
 const init = () => {
   const result = program
+    .name('streaker')
     .description(pkg.description)
     .version(pkg.version)
     .arguments('<username>')
