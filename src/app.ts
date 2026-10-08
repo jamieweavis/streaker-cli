@@ -2,13 +2,13 @@
 
 import { program } from 'commander';
 
-import { description, version } from '../package.json';
-import { run } from './run';
+import pkg from '../package.json' with { type: 'json' };
+import { run } from './run.ts';
 
 const init = () => {
   const result = program
-    .description(description)
-    .version(version)
+    .description(pkg.description)
+    .version(pkg.version)
     .arguments('<username>')
     .option(
       '-g, --graph',

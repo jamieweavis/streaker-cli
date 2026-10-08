@@ -1,7 +1,7 @@
 import { blue, red, yellow } from 'colorette';
 import { fetchGitHubStats } from 'contribution';
 
-import { buildContributionGraph } from './contribution-graph';
+import { buildContributionGraph } from './contribution-graph.ts';
 
 export const run = async (username?: string, showGraph?: boolean) => {
   try {
