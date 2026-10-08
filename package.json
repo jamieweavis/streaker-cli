@@ -1,7 +1,7 @@
 {
   "name": "streaker",
   "description": "GitHub contribution streak and statistic tracking command line application with ASCII contribution graph",
-  "version": "2.6.0",
+  "version": "2.5.1",
   "type": "module",
   "author": "Jamie Weavis",
   "main": "build/src/app.js",
