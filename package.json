@@ -10,6 +10,9 @@
   "bin": {
     "streaker": "build/src/app.js"
   },
+  "files": [
+    "build"
+  ],
   "bugs": {
     "url": "https://github.com/jamieweavis/streaker-cli/issues"
   },
