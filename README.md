@@ -61,9 +61,10 @@ $ streaker jamieweavis --no-icon --no-contributions
 
 ### Accent color
 
+Pick from terminal colors: `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, a `bright-` variant of each (e.g. `bright-magenta`), or `rainbow`.
+
 ```sh
-$ streaker jamieweavis --accent bright-magenta
-$ streaker jamieweavis --accent rainbow
+$ streaker jamieweavis --accent magenta
 ```
 
 ### Graph
