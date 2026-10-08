@@ -1,7 +1,11 @@
-import { green } from 'colorette';
 import type { Contributions } from 'contribution';
 
-export function buildContributionGraph(contributions: Contributions): string {
+import type { Palette } from './palette.ts';
+
+export function buildContributionGraph(
+  contributions: Contributions,
+  palette: Palette,
+): string {
   // Define ASCII characters for different contribution levels
   const levels = [' ', '░', '▒', '▓', '█'];
 
@@ -49,7 +53,7 @@ export function buildContributionGraph(contributions: Contributions): string {
   });
 
   // Add month labels
-  graph += '     ';
+  let monthLabels = '';
   monthPositions.forEach((pos, idx) => {
     const month = months[idx];
     const nextPos =
@@ -58,16 +62,16 @@ export function buildContributionGraph(contributions: Contributions): string {
     const width = nextPos - pos;
     const spaces = Math.max(0, width - month.length);
 
-    graph += month + ' '.repeat(spaces);
+    monthLabels += month + ' '.repeat(spaces);
   });
-  graph += '\n';
+  graph += `     ${palette.label(monthLabels)}\n`;
 
   // Add a separator line
-  graph += `    ┌${'─'.repeat(weeks.length)}─\n`;
+  graph += `    ${palette.label(`┌${'─'.repeat(weeks.length)}─`)}\n`;
 
   // Build the graph row by row (day by day)
   for (let day = 0; day < 7; day++) {
-    graph += `${dayLabels[day]} │ `;
+    graph += `${palette.label(`${dayLabels[day]} │`)} `;
 
     for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) {
       const week = weeks[weekIndex];
@@ -78,7 +82,10 @@ export function buildContributionGraph(contributions: Contributions): string {
         const date = new Date(dateStr);
         if (date.getDay() === day) {
           const level = contributions[dateStr].gitHubLegendLevel;
-          cell = green(levels[level]);
+          cell =
+            level === 0
+              ? ' '
+              : palette.accentAt(levels[level], weekIndex / weeks.length);
           break;
         }
       }
@@ -90,7 +97,7 @@ export function buildContributionGraph(contributions: Contributions): string {
   }
 
   // Add a bottom line
-  graph += `    └${'─'.repeat(weeks.length)}─`;
+  graph += `    ${palette.label(`└${'─'.repeat(weeks.length)}─`)}`;
 
   return graph;
 }
