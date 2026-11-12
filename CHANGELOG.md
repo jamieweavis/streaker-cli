@@ -1,3 +1,11 @@
+# [2.7.0](https://github.com/jamieweavis/streaker-cli/compare/v2.6.0...v2.7.0) (2026-11-12)
+
+
+### Features
+
+* render contribution graph with colour tiles and add --graph-axis ([6f6731a](https://github.com/jamieweavis/streaker-cli/commit/6f6731a4af55322c98e95bd2f506b4f7c51b91a4))
+* show specific errors for invalid and unknown usernames ([0e209a8](https://github.com/jamieweavis/streaker-cli/commit/0e209a8aab040954b30484909a9288736436a2c5))
+
 # [2.6.0](https://github.com/jamieweavis/streaker-cli/compare/v2.5.1...v2.6.0) (2026-10-08)
 
 
