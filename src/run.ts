@@ -11,6 +11,7 @@ export type RunOptions = {
   accent: string;
   contributions: boolean;
   graph?: boolean;
+  axis: boolean;
   icon: boolean;
   streak: boolean;
 };
@@ -45,7 +46,7 @@ export const run = async (
 
     if (options.graph) {
       console.info(
-        `\n${buildContributionGraph(gitHubStats.contributions, palette)}\n`,
+        `\n${buildContributionGraph(gitHubStats.contributions, palette, { axis: options.axis })}\n`,
       );
       return process.exit(0);
     }

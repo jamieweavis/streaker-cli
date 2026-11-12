@@ -25,6 +25,7 @@ streaker <username> [options]
 | ---------------------- | --------------------------------------------------- | ------- |
 | `-a, --accent <color>` | Accent color for the icon, headings and graph       | `green` |
 | `-g, --graph`          | Show the contribution graph instead of stats        |         |
+| `-G, --graph-axis`     | Show the graph with month and day labels            |         |
 | `--no-icon`            | Hide the octocat icon                               |         |
 | `--no-streak`          | Hide streak stats                                   |         |
 | `--no-contributions`   | Hide contribution stats                             |         |
@@ -69,21 +70,35 @@ $ streaker jamieweavis --accent magenta
 
 ### Graph
 
-Display the ASCII contribution graph for the past year:
+Display the contribution graph for the past year:
 
 ```
 $ streaker jamieweavis --graph
 
-     Oct Nov  Dec Jan Feb Mar  Apr May  Jun Jul Aug  Sep Oct
-    ┌──────────────────────────────────────────────────────
-Sun │    ▒               ░           ▒░    ░░░░░  ▒ █░▒░█▒
-Mon │  ▒█ ░░  ░░░ ░░░  ░ ░▒░▓░░▓ ░ ░ ▓░ ▒░░▒░█▒▒░░░ ▒ █░▒░
-Tue │  ▒▒▒░░ ░░▒  ░░  ░░ ▒░░░░░░ ░░░ ▒░░░░░░░▓░▓▒▓░▒░ ▓▒ █░
-Wed │  ▒░░░░ ░░▒░  ░░  ░░░░░█░░░ ░ ░░░▓░▒░░░█▓░▒▒░▓░░ ▓█▒▓░
-Thu │ ░░░░░░ ░▒░░   ░  ░░▒▒▒░░█   ░ ▓█▒░▒ ░▓▒░▓▒▒▒▒ ▓ █▒░░▒
-Fri │ ░░▒░░  ░░ ░       ░▒░░▒░▒  ░  █░░  ░░▒▓▒▒░░░░▒░ ░░ ░
-Sat │ ░░▒               ░  ▒         ░ ▒   ░█▒▒▒░░ ▓░▒▓ ░░
-    └──────────────────────────────────────────────────────
+                            ■                       ■ ■         ■ ■ ■ ■ ■     ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+■     ■ ■ ■   ■ ■ ■     ■   ■ ■ ■ ■ ■ ■ ■   ■   ■   ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+■   ■ ■ ■     ■ ■     ■ ■   ■ ■ ■ ■ ■ ■ ■   ■ ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■ ■   ■ ■ ■ ■ ■ ■ ■
+■   ■ ■ ■ ■     ■ ■     ■ ■ ■ ■ ■ ■ ■ ■ ■   ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+■   ■ ■ ■ ■       ■     ■ ■ ■ ■ ■ ■ ■ ■       ■   ■ ■ ■ ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■   ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+    ■ ■   ■               ■ ■ ■ ■ ■ ■ ■     ■     ■ ■ ■     ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■ ■   ■ ■ ■ ■ ■ ■
+                          ■     ■                   ■   ■       ■ ■ ■ ■ ■ ■ ■   ■ ■ ■ ■   ■ ■   ■ ■ ■ ■
+```
+
+Add month and day labels with `--graph-axis`:
+
+```
+$ streaker jamieweavis --graph-axis
+
+      Nov     Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     Aug       Sept    Oct     Nov
+    ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────
+Sun │                             ■                       ■ ■         ■ ■ ■ ■ ■     ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+Mon │ ■     ■ ■ ■   ■ ■ ■     ■   ■ ■ ■ ■ ■ ■ ■   ■   ■   ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+Tue │ ■   ■ ■ ■     ■ ■     ■ ■   ■ ■ ■ ■ ■ ■ ■   ■ ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■ ■   ■ ■ ■ ■ ■ ■ ■
+Wed │ ■   ■ ■ ■ ■     ■ ■     ■ ■ ■ ■ ■ ■ ■ ■ ■   ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+Thu │ ■   ■ ■ ■ ■       ■     ■ ■ ■ ■ ■ ■ ■ ■       ■   ■ ■ ■ ■ ■   ■ ■ ■ ■ ■ ■ ■ ■ ■   ■   ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
+Fri │     ■ ■   ■               ■ ■ ■ ■ ■ ■ ■     ■     ■ ■ ■     ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■   ■ ■   ■ ■ ■ ■ ■ ■
+Sat │                           ■     ■                   ■   ■       ■ ■ ■ ■ ■ ■ ■   ■ ■ ■ ■   ■ ■   ■ ■ ■ ■
+    └──────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
 The accent applies to the graph too:

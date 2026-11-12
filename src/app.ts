@@ -24,6 +24,10 @@ const init = () => {
       '-g, --graph',
       'output ASCII GitHub contribution graph instead of stats',
     )
+    .option(
+      '-G, --graph-axis',
+      'output the contribution graph with month and day labels',
+    )
     .option('--no-icon', 'hide the octocat icon')
     .option('--no-streak', 'hide streak stats')
     .option('--no-contributions', 'hide contribution stats')
@@ -34,8 +38,9 @@ const init = () => {
 
   return run(username, {
     accent: options.accent,
+    axis: Boolean(options.graphAxis),
     contributions: options.contributions,
-    graph: options.graph,
+    graph: options.graph || options.graphAxis,
     icon: options.icon,
     streak: options.streak,
   });

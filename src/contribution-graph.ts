@@ -1,20 +1,40 @@
 import type { Contributions } from 'contribution';
 
-import type { Palette } from './palette.ts';
+import { type Palette, TILE_WIDTH } from './palette.ts';
+
+/** Columns used by each week: a tile and a gap */
+const CELL_WIDTH = TILE_WIDTH + 1;
+/** Columns used by the day labels and border, e.g. `Mon │ ` */
+const GUTTER_WIDTH = 6;
+
+/** How many weeks fit in `columns`, or all of them when the width is unknown */
+export const visibleWeeks = (
+  total: number,
+  columns?: number,
+  gutter = GUTTER_WIDTH,
+): number =>
+  columns
+    ? Math.max(1, Math.min(total, Math.floor((columns - gutter) / CELL_WIDTH)))
+    : total;
+
+export type GraphOptions = {
+  /** Show the month and day labels and the border, defaults to true */
+  axis?: boolean;
+  /** Terminal width to fit the graph in, defaults to the current terminal */
+  columns?: number;
+};
 
 export function buildContributionGraph(
   contributions: Contributions,
   palette: Palette,
+  { axis = true, columns = process.stdout.columns }: GraphOptions = {},
 ): string {
-  // Define ASCII characters for different contribution levels
-  const levels = [' ', '░', '▒', '▓', '█'];
-
   // Sort dates to ensure chronological order
   const sortedDates = Object.keys(contributions).sort();
   if (sortedDates.length === 0) return 'No data available';
 
   // Group dates by week
-  const weeks: string[][] = [];
+  let weeks: string[][] = [];
   let currentWeek: string[] = [];
 
   for (const dateStr of sortedDates) {
@@ -33,6 +53,11 @@ export function buildContributionGraph(
   if (currentWeek.length > 0) {
     weeks.push(currentWeek);
   }
+
+  // Keep the most recent weeks that fit in the terminal
+  weeks = weeks.slice(
+    weeks.length - visibleWeeks(weeks.length, columns, axis ? GUTTER_WIDTH : 0),
+  );
 
   // Initialize the graph with proper dimensions
   const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -58,46 +83,46 @@ export function buildContributionGraph(
     const month = months[idx];
     const nextPos =
       idx < monthPositions.length - 1 ? monthPositions[idx + 1] : weeks.length;
-    // Adjust spacing to account for no spaces between week columns
-    const width = nextPos - pos;
-    const spaces = Math.max(0, width - month.length);
-
-    monthLabels += month + ' '.repeat(spaces);
+    const width = (nextPos - pos) * CELL_WIDTH;
+    // Skip a label that would collide with the next one
+    if (width < month.length + 1 && idx < monthPositions.length - 1) {
+      monthLabels += ' '.repeat(width);
+      return;
+    }
+    monthLabels += month.padEnd(width);
   });
-  graph += `     ${palette.label(monthLabels)}\n`;
-
-  // Add a separator line
-  graph += `    ${palette.label(`┌${'─'.repeat(weeks.length)}─`)}\n`;
+  if (axis) {
+    graph += `      ${palette.label(monthLabels.trimEnd())}\n`;
+    graph += `    ${palette.label(`┌${'─'.repeat(weeks.length * CELL_WIDTH)}`)}\n`;
+  }
 
   // Build the graph row by row (day by day)
   for (let day = 0; day < 7; day++) {
-    graph += `${palette.label(`${dayLabels[day]} │`)} `;
+    let row = axis ? `${palette.label(`${dayLabels[day]} │`)} ` : '';
 
     for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) {
       const week = weeks[weekIndex];
-      let cell = ' ';
+      let cell = ' '.repeat(CELL_WIDTH);
 
       // Find the day in this week
       for (const dateStr of week) {
         const date = new Date(dateStr);
         if (date.getDay() === day) {
           const level = contributions[dateStr].gitHubLegendLevel;
-          cell =
-            level === 0
-              ? ' '
-              : palette.accentAt(levels[level], weekIndex / weeks.length);
+          cell = `${palette.tile(level, weekIndex / weeks.length)} `;
           break;
         }
       }
 
-      graph += cell; // No space added after each cell
+      row += cell;
     }
 
-    graph += '\n';
+    graph += `${row.trimEnd()}\n`;
   }
 
-  // Add a bottom line
-  graph += `    ${palette.label(`└${'─'.repeat(weeks.length)}─`)}`;
+  if (axis) {
+    graph += `    ${palette.label(`└${'─'.repeat(weeks.length * CELL_WIDTH)}`)}`;
+  }
 
-  return graph;
+  return graph.trimEnd();
 }
