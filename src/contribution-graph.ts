@@ -1,4 +1,4 @@
-import type { Contributions } from 'contribution';
+import type { ContributionDay, ContributionLevel } from 'contribution';
 
 import { type Palette, TILE_WIDTH } from './palette.ts';
 
@@ -25,12 +25,15 @@ export type GraphOptions = {
 };
 
 export function buildContributionGraph(
-  contributions: Contributions,
+  days: readonly ContributionDay[],
   palette: Palette,
   { axis = true, columns = process.stdout.columns }: GraphOptions = {},
 ): string {
+  const levels = new Map<string, ContributionLevel>(
+    days.map(({ date, level }) => [date, level]),
+  );
   // Sort dates to ensure chronological order
-  const sortedDates = Object.keys(contributions).sort();
+  const sortedDates = [...levels.keys()].sort();
   if (sortedDates.length === 0) return 'No data available';
 
   // Group dates by week
@@ -108,7 +111,7 @@ export function buildContributionGraph(
       for (const dateStr of week) {
         const date = new Date(dateStr);
         if (date.getDay() === day) {
-          const level = contributions[dateStr].gitHubLegendLevel;
+          const level = levels.get(dateStr) ?? 0;
           cell = `${palette.tile(level, weekIndex / weeks.length)} `;
           break;
         }

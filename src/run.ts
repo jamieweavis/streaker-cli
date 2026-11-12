@@ -46,7 +46,7 @@ export const run = async (
 
     if (options.graph) {
       console.info(
-        `\n${buildContributionGraph(gitHubStats.contributions, palette, { axis: options.axis })}\n`,
+        `\n${buildContributionGraph(gitHubStats.days, palette, { axis: options.axis })}\n`,
       );
       return process.exit(0);
     }
@@ -57,9 +57,9 @@ export const run = async (
         renderStats(
           'streak',
           [
-            ['current', gitHubStats.currentStreak],
-            ['best', gitHubStats.bestStreak],
-            ['previous', gitHubStats.previousStreak],
+            ['current', gitHubStats.streak.current],
+            ['best', gitHubStats.streak.best],
+            ['previous', gitHubStats.streak.previous],
           ],
           palette,
         ),
@@ -70,9 +70,9 @@ export const run = async (
         renderStats(
           'contributions',
           [
-            ['today', gitHubStats.todaysContributions],
-            ['most', gitHubStats.mostContributions],
-            ['total', gitHubStats.totalContributions],
+            ['today', gitHubStats.contributions.today],
+            ['most', gitHubStats.contributions.most],
+            ['total', gitHubStats.contributions.total],
           ],
           palette,
         ),
