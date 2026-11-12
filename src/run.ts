@@ -1,5 +1,9 @@
 import { red } from 'colorette';
-import { fetchGitHubStats } from 'contribution';
+import {
+  fetchGitHubStats,
+  GitHubRequestError,
+  InvalidUsernameError,
+} from 'contribution';
 
 import { buildContributionGraph } from './contribution-graph.ts';
 import { indent, joinColumns, stackColumns, totalWidth } from './layout.ts';
@@ -17,6 +21,17 @@ export type RunOptions = {
 };
 
 const INDENT = 2;
+
+/** Message shown to the user when fetching a user's contribution stats fails */
+export const errorMessage = (error: unknown, username: string): string => {
+  if (error instanceof InvalidUsernameError) {
+    return `"${username}" is not a valid GitHub username`;
+  }
+  if (error instanceof GitHubRequestError && error.status === 404) {
+    return `GitHub user "${username}" not found`;
+  }
+  return 'Failed to fetch contribution stats';
+};
 
 const fail = (message: string) => {
   console.error(`\n  ${red(message)}\n`);
@@ -96,7 +111,7 @@ export const run = async (
 
     console.info(`\n${indent(output, INDENT)}\n`);
     return process.exit(0);
-  } catch (_error) {
-    return fail('Failed to fetch contribution stats');
+  } catch (error) {
+    return fail(errorMessage(error, username ?? ''));
   }
 };
