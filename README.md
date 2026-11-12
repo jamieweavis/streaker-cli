@@ -1,3 +1,5 @@
+<div align="center">
+
 # Streaker CLI
 
 GitHub contribution streak and statistic tracking command line application with ASCII contribution graph
@@ -6,6 +8,10 @@ GitHub contribution streak and statistic tracking command line application with 
 [![downloads](https://img.shields.io/npm/dt/streaker.svg)](https://npmjs.com/package/streaker)
 [![version](https://img.shields.io/npm/v/streaker.svg)](https://github.com/jamieweavis/streaker-cli/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/streaker-cli/blob/main/LICENSE)
+
+[**Installation**](#installation) · [Usage](#usage) · [Options](#options) · [ASCII Graph](#ascii-graph) · [Related](#related)
+
+</div>
 
 ## Installation
 
@@ -68,9 +74,12 @@ Pick from terminal colors: `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, 
 $ streaker jamieweavis --accent magenta
 ```
 
-### Graph
+### ASCII Graph
 
 Display the contribution graph for the past year:
+
+> [!NOTE]
+> In the terminal, each tile is shaded by contribution level, using the accent color at increasing opacity. GitHub markdown can't render that, so every tile looks the same in the examples below.
 
 ```
 $ streaker jamieweavis --graph
